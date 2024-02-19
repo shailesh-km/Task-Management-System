@@ -1,0 +1,53 @@
+<h2>Welcome To Task Management System</h2>
+<div class="dashboard">
+    <div class="container">
+        <div class="main-content">
+            <h4 style="margin-left:23px">Task</h4>
+<div class="mat-table-container">
+            <table mat-table [dataSource]="tasks" >
+
+                <ng-container matColumnDef="taskName">
+                  <th mat-header-cell *matHeaderCellDef> Task Name </th>
+                  <td mat-cell *matCellDef="let task"> {{task.taskName}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="startDate">
+                  <th mat-header-cell *matHeaderCellDef> Start Date </th>
+                  <td mat-cell *matCellDef="let task"> {{task.startDate}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="endDate">
+                  <th mat-header-cell *matHeaderCellDef> End date </th>
+                  <td mat-cell *matCellDef="let task"> {{task.endDate}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="duration">
+                  <th mat-header-cell *matHeaderCellDef> Duration </th>
+                  <td mat-cell *matCellDef="let task"> {{task.duration}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="dueDate">
+                  <th mat-header-cell *matHeaderCellDef> Due date </th>
+                  <td mat-cell *matCellDef="let task"> {{task.dueDate}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="status">
+                  <th mat-header-cell *matHeaderCellDef> Status </th>
+                  <td mat-cell *matCellDef="let task"> {{task.status}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="reportingTo">
+                  <th mat-header-cell *matHeaderCellDef> Reporting </th>
+                  <td mat-cell *matCellDef="let task"> {{task.reportingTo}} </td>
+                </ng-container>
+              
+                
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+        </div>
+    </div>
+
+</div>

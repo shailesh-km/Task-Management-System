@@ -1,0 +1,58 @@
+.sidebar{
+    background-color: #E0ffff;
+    height: 100%;
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    top: 0vh;
+    z-index: 2;
+}
+
+.user-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-details{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bottom-section{
+    display: flex;
+   flex-direction: column;
+}
+
+.profile-settings,
+.logout{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.item-text{
+    font-family:'Roboto',sans-serif;
+    font-size:16px;
+}
+
+.profile-settings span,
+.logout span{
+    margin-right:10px;
+}

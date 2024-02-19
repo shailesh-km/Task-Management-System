@@ -1,0 +1,77 @@
+<form #taskForm="ngForm"  (ngSubmit)="addTask(taskForm.value)">
+    <div class="form-container">
+        <div class="row">
+
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Task Name</mat-label>
+                <input matInput type="text" name="taskName" ngModel required>
+              </mat-form-field>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Start Date</mat-label>
+                <input matInput type="text" name="startDate" ngModel required>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>End date</mat-label>
+                <input matInput type="text" name="endDate" ngModel required>
+              </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Reporting to</mat-label>
+                <input matInput type="text" name="reportingTo" ngModel required>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Assigned to</mat-label>
+                <input matInput type="text" name="assignedTo" ngModel required>
+              </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Duration</mat-label>
+                <input matInput type="text" name="duration" ngModel required>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Status</mat-label>
+                <mat-select id="status" name ="status" ngModel required>
+                    <mat-option value ="Close">Close</mat-option>
+                    <mat-option value ="Pending">Pending</mat-option>
+                    <mat-option value ="on Hold">On Hold</mat-option>
+                    <mat-option value ="In Progress">In Progress</mat-option>
+                    <mat-option value ="Done">Done</mat-option>
+                    <mat-option value ="Waiting for review">Waiting for review</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10">
+            <mat-form-field appearance="outline" style="width:100%">
+                <mat-label>Comment</mat-label>
+                <input matInput type="text-area" name="comment" ngModel >
+              </mat-form-field>
+            </div>
+            <div class= "col-2">
+                <button mat-raised-button color="primary" type="button" style="margin-top:10px;"  (click)="fileInput.click()">Add Images</button>
+                <input #fileInput type="file" accept='image/*' [hidden]="true" />            </div>
+        </div>
+
+        <button mat-raised-button [disabled]="taskForm.invalid" color="primary" type="submit">Add Task</button>
+    </div>
+</form>

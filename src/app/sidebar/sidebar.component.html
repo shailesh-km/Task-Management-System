@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <div class="user-profile" (click)="fileInput.click()">
+        <img class="user-image" [src]="userImageSrc"  alt="User Image">
+        <input type="file" #fileInput style="display: none;" (change)="onFileSelected($event)">
+        <div class= "user-details" > Mr User
+    </div> 
+</div> 
+
+<div class="bottom-section">
+<div class="profile-settings">
+    <span class="item-text">Profile Setting</span>
+    <i class="material-icons item-icon">settings</i>
+</div>    
+<div class="logout">
+    <span class="item-text">Log out</span>
+    <i class="material-icons item-icon" style="padding-left:48px;">exit_to_app</i>
+</div>    
+
+</div>
+
+
+</div>    
